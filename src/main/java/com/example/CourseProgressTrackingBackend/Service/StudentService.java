@@ -7,8 +7,10 @@ import java.util.*;
 
 @Service
 public class StudentService {
+    int idCounter = 1;
     List<Student> students = new ArrayList<>();
     public Student registerStudent(Student student){
+        student.id=idCounter++;
         students.add(student);
         return student;
     }
@@ -23,4 +25,23 @@ public class StudentService {
     public List<Student> getStudents(){
         return students;
     }
+    public Student getStudentById(int id){
+        for(Student s:students){
+            if(s.id==id){
+                return s;
+            }
+        }
+        return null;
+    }
+
+    public String deleteStudent(int id) {
+        for (Student s : students) {
+            if (s.id == id) {
+                students.remove(s);
+                return "Student deleted";
+            }
+        }
+        return "Student not found";
+    }
+
 }

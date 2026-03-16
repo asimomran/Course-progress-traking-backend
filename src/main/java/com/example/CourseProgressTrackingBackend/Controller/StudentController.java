@@ -28,4 +28,13 @@ public class StudentController {
     public Student login(@RequestBody Student student){
         return studentService.Login(student.email,student.password);
     }
+    @GetMapping("/{id}")
+    public Student getStudentById(@PathVariable int id){
+        return studentService.getStudentById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteStudent(@PathVariable int id) {
+        return studentService.deleteStudent(id);
+    }
 }
