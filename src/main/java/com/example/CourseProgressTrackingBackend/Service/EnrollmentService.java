@@ -2,7 +2,6 @@ package com.example.CourseProgressTrackingBackend.Service;
 
 import com.example.CourseProgressTrackingBackend.Model.Course;
 import com.example.CourseProgressTrackingBackend.Model.Student;
-import com.example.CourseProgressTrackingBackend.Service.CourseService;
 import com.example.CourseProgressTrackingBackend.Model.Enrollment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

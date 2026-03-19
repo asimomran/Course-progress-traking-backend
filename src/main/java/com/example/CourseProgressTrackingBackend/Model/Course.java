@@ -5,4 +5,6 @@ public class Course {
     public String title;
     public String description;
     public String instructor;
+
+    public int totalModules;
 }
