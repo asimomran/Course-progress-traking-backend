@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CourseService {
 
-    List<Course> courses = new ArrayList<>();
+     List<Course> courses = new ArrayList<>();
     int idCounter = 1;
 
     public Course createCourse(Course course) {
@@ -22,7 +22,7 @@ public class CourseService {
         return courses;
     }
 
-    public Course getCourseById(int id) {
+    public  Course getCourseById(int id) {
         for (Course c : courses) {
             if (c.id == id) {
                 return c;
